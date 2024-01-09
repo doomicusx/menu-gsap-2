@@ -1,0 +1,115 @@
+$corMenuLink: white;
+$corMenuBackground: white;
+$paddingRightRow: 25rem;
+$paddingLeftRow: 35rem;
+$paddingRightRowMoblie: 5rem;
+$paddingLeftRowMoblie: 10rem;
+$fontSizeMenu: 8rem;
+$fontSizeMenuMoblie: 2.625;
+
+.link a {
+    color: $corMenuLink;
+}
+.logo {
+    background: black;
+    color: #000;
+    padding: 0.35em 0.5em 0.2em 0.5em;
+    line-height: 1;
+    border-radius: 0.25em;
+}
+button.toggle {
+    color: $corMenuLink;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 20px;
+}
+/* Linhas alterar apenas padding e posicionamento */
+.row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.row:not(:last-child) {
+    padding-bottom: 40px;
+}
+
+.r-1 {
+    left: 110%;
+    justify-content: flex-end;
+    font-size: $fontSizeMenu;
+    padding-right: $paddingRightRow;
+}
+
+.r-2 {
+    justify-content: flex-end;
+    left: -110%;
+    font-size: $fontSizeMenu;
+    padding-right: $paddingLeftRow;
+}
+
+.r-3 {
+    left: 110%;
+    justify-content: space-between;
+    font-size: $fontSizeMenu;
+    padding-left: $paddingLeftRow;
+}
+
+.r-4 {
+    left: -110%;
+    justify-content: space-between;
+    font-size: $fontSizeMenu;
+    padding-left: $paddingRightRow;
+}
+/* Menu do efeito, já posicionado, porde alterar o padding */
+.menu {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* O container que ficar o conteudo precisa ter essa clase, pode alterar o width e heigth quando estiver com conteudo */
+.website-content {
+    width: 100vw; /* Coloquei por causa do tamanho do conteudo */
+    height: 100vh; /* Coloquei por causa do tamanho do conteudo */
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: white;
+    transform: scale(1);
+}
+/* Nav bar nada mais é a navegação a cima, pode ser alterada por um menu, não obrigatorio */
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    mix-blend-mode: difference;
+}
+@media (max-width: 900px) {
+    .r-1 {
+        font-size: $fontSizeMenu;
+        padding-right: 5rem;
+    }
+
+    .r-2 {
+        font-size: $fontSizeMenu;
+        padding-right: $paddingLeftRowMoblie;
+    }
+
+    .r-3 {
+        font-size: $fontSizeMenu;
+        padding-left: $paddingLeftRowMoblie;
+    }
+
+    .r-4 {
+        font-size: $fontSizeMenu;
+        padding-left: 5rem;
+    }
+}

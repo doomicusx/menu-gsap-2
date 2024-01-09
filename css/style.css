@@ -1,0 +1,9 @@
+@import url(menu.css);
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #1e1e1e;
+}
+body.hide {
+  overflow-x: hidden;
+}
